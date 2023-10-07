@@ -1,0 +1,172 @@
+.project{
+    margin-top: 130px;
+    padding-bottom: 80px;
+    &-paragraph{
+        @include flex(center, space-between);
+        gap: 5px;
+        padding-bottom: 65px;
+
+    }
+
+    &-text{
+        @include adaptive-value('font-size', 48, 19);
+        @include adaptive-value('line-height', 64, 23);
+        color: #282938;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 64px;
+    }
+
+    &-link__box{
+        @include flex(center, unset);
+        @include adaptive-value('gap', 15, 5);
+    }
+
+    &-link{
+        @include adaptive-value('font-size', 16, 12);
+        @include adaptive-value('line-height', 28, 23);
+        color: #282938;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    &-image__first{
+        position: relative;
+
+        &:hover::before{
+            content: '';
+            width: 396px;
+            height: 100%;
+            background: linear-gradient(329deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+            transition:  0.2s ease-in-out;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+       
+    }
+
+    &-image__first:hover{
+        cursor:  pointer;
+        .project-title, .project-subtitle, .project-image__link{
+            display: block;
+        }
+    }
+    
+    &-title{
+        position: absolute;
+        bottom: 216px;
+        width: 313px;
+        color: #fff;
+        @include adaptive-value('font-size', 24, 18);
+        @include adaptive-value('line-height', 36, 24);
+        font-style: normal;
+        font-weight: 600;
+        margin-left: 48px;
+        display: none;
+    }
+
+    &-subtitle{
+        position: absolute;
+        bottom: 144px;
+        width: 293px;
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 23);
+        color: #fff;
+        font-style: normal;
+        font-weight: 500;
+        margin-top: 14px;
+        margin-left: 48px;
+        opacity: 0.8;
+        display: none;
+
+    }
+    
+    &-images__content{
+        @include flex(center, space-between);
+        gap: 15px;
+
+        @media screen and (max-width: 700px){
+            flex-direction: column;
+        }
+    }
+
+    &-image__two{
+        position: relative;
+
+        &:hover::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(329deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &-image__two:hover{
+        cursor:  pointer;
+        .project-title__two,  .project-link__two{
+            display: block;
+
+        }
+    }
+
+    &-image__link{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 23);
+        position: absolute;
+        bottom: 77px;
+        margin-left: 48px;
+        color: #FCD980;
+        font-style: normal;
+        font-weight: 500;
+        @include flex(center, unset);
+        gap: 15px;
+        display: none;
+    }
+
+    &-title__two{
+        @include adaptive-value('font-size', 24, 17);
+        @include adaptive-value('line-height', 36, 23);
+        position: absolute;
+        bottom: 83px;
+        width: 233px;
+        color: #fff;
+        font-style: normal;
+        font-weight: 600;
+        margin-left: 48px;
+        display: none
+    }
+
+    &-link__two{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 23);
+        position: absolute;
+        bottom: 45px;
+        margin-left: 48px;
+        color: #FCD980;
+        font-style: normal;
+        font-weight: 500;
+        @include flex(center, unset);
+        gap: 15px;
+        display: none;
+    }
+
+    &-img{
+        margin-top: 32px;
+        width: 100%;
+
+    }
+
+    &-img__one{
+        // @include adaptive-value('width', 843, 400)
+        width: 100%;
+        object-fit: cover;
+    }
+}

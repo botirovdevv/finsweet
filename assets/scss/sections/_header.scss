@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+.header{
+    @include flex(center, space-between);
+    margin-top: 130px;
+
+
+    &-img{
+        @include adaptive-value('width', 638, 100);
+
+        @media screen and (max-width: 880px){
+            display: none;
+        }
+    }
+
+    &-title{
+        @include adaptive-value('font-size', 54, 20);
+        @include adaptive-value('line-height', 74, 35);
+        color: #fff;
+        font-style: normal;
+        font-weight: 600;
+        width: 582px;
+        margin-bottom: 25px;
+
+        @media screen and (max-width: 880px){
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1200px){
+            width: 100%;
+        }
+    }
+
+    &-subtitle{
+        @include adaptive-value('font-size', 16, 12);
+        @include adaptive-value('line-height', 28, 23);
+        color: #fff;
+        font-style: normal;
+        font-weight: 400;
+        opacity: 0.7;
+        width: 562px;
+        margin-bottom: 50px;
+        @media screen and (max-width: 880px){
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1200px){
+            width: 100%;
+        }
+    }
+
+    &-buttons{
+        @include flex(center, unset);
+        gap: 40px;
+        margin-bottom: 150px;
+         @media screen and (max-width: 880px){
+            justify-content: center;
+        }
+    }
+
+    &-button__work{
+        @include adaptive-value('font-size', 18, 10);
+        border-radius: 41px;
+        background: #FCD980;
+        padding: 16px 56px;
+        color: #1B1C2B;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        transition: all 0.2s ease-in-out;
+        border: none;
+        &:hover{
+            color: #000;
+        }
+        @media screen and (max-width: 450px){
+            padding: 10px 30px;
+            line-height: 24px;
+        }
+    }
+
+    &-button__pricing{
+        @include adaptive-value('font-size', 16, 12);
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+        @include flex(center, unset);
+        gap: 15px;
+
+    }
+}

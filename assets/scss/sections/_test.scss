@@ -1,0 +1,20 @@
+body{
+    height: 100vh;
+    background-color: #eee;
+}
+.test-text{
+    @include adaptive-value('font-size', 35, 20);
+    @include adaptive-value('line-height', 40, 24);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+        // width: 399px;
+        font-style: normal;
+        font-weight: 500;
+        margin-top: 23px;
+        font-family: sans-serif;
+}
+
+.warning{
+    color: red;
+}

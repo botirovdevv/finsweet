@@ -1,0 +1,90 @@
+.blog{
+    margin-top: 130px;
+
+    &-title{
+        @include adaptive-value('font-size', 48, 20);
+        @include adaptive-value('line-height', 64, 24);
+        margin-bottom: 65px;
+        color: #282938;
+        font-style: normal;
+        font-weight: 600;
+
+        @media screen and (max-width: 500px){
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &-date{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 23);
+        color: #282938;
+        font-style: normal;
+        font-weight: 500;
+        opacity: 0.7;
+        margin-top: 40px;
+        margin-bottom: 16px;
+        @media screen and (max-width: 500px){
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &-subtitle{ 
+        @include adaptive-value('font-size', 24, 19);
+        @include adaptive-value('line-height', 36, 24);
+        color: #282938;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 16px;
+        width: 405px;
+        @media screen and (max-width: 500px){
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &-card__text{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 24);
+        color: #282938;
+        font-style: normal;
+        font-weight: 400;
+        opacity: 0.7;
+        margin-top: 32px;
+        width: 405px;
+        @media screen and (max-width: 500px){
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &-link{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 24);
+        color: #282938;
+        font-style: normal;
+        font-weight: 500;
+        margin-top: 30px;
+        @include flex(center, unset);
+        gap: 15px;
+        
+        @media screen and (max-width: 500px){
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    &-cards{
+        @include flex(center, center);
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    &-img{
+        @media screen and (max-width: 500px){
+            width: 100%;
+        }
+    }
+
+}

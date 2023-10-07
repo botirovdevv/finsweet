@@ -1,0 +1,113 @@
+.footer{
+    background: #1C1E53;
+    height: 100%;
+    margin-top: 130px;
+    padding-bottom: 50px;
+
+    &-content{
+        margin-top: 105px;
+        @include flex(flex-start, unset);
+        gap: 200px;
+
+        @media screen and (max-width: 950px){
+            justify-content: space-between;
+            gap: 20px;
+        }
+    }
+
+    &-subtitle{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 24);
+        width: 399px;
+        color: #fff;
+        font-style: normal;
+        font-weight: 500;
+        opacity: 0.8;
+        margin-top: 23px;
+        @media screen and (max-width: 666px){
+            width: 100%;
+        }
+    }
+
+    &-title{
+        @include adaptive-value('font-size', 48, 20);
+        @include adaptive-value('line-height', 64, 24);
+        color: #FFF;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    &-info__subtitle{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 24);
+        width: 399px;
+        color: #F4F6FC;
+        font-style: normal;
+        font-weight: 400;
+        opacity: 0.8;
+        margin-top: 14px;
+        margin-bottom: 28px;
+
+        @media screen and (max-width: 1050px){
+            width: 100%;
+        }
+
+        
+    }
+
+    &-links{
+        @include flex(center, unset);
+        gap: 25px;
+
+    }
+
+    &-links .bx{
+        color: #fff;
+        font-size: 18px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+            color: #F4F6FC;
+            opacity: 0.7;
+        }
+    }
+
+    &-text{
+        @media screen and (max-width: 610px){
+            display: none;
+        }
+    }
+}
+
+.footer-nav{
+    padding: 32px 0;
+
+    &__content{
+        @include flex(center, space-between);
+    }
+
+    &__links{
+        @include flex(center, unset);
+        gap: 30px;
+
+        @media screen and (max-width: 700px){
+            display: none;
+        }
+    }
+
+    &__links a{
+        @include adaptive-value('font-size', 16, 13);
+        color: #282938;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    &__copyright{
+        @include adaptive-value('font-size', 16, 13);
+        color: #282938;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+    }
+}
