@@ -1,0 +1,68 @@
+.banner{
+    &-content{
+        margin-top: 130px;
+        @include flex(center, space-between);
+        gap: 15px;
+
+        @media screen and (max-width: 980px){
+            flex-direction: column;
+            @include flex(center, center)
+        }
+    }
+
+    &-text{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 32, 24);
+        color: #282938;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 8px;
+        @media screen and (max-width: 980px){
+            text-align: center;
+        }
+
+         @media screen and (max-width: 550px){
+            width: 100%;
+        }
+    }
+
+    &-title{
+        @include adaptive-value('font-size', 54, 20);
+        @include adaptive-value('line-height', 74, 23);
+        width: 535px;
+        color: #282938;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 30px;
+         @media screen and (max-width: 980px){
+            text-align: center;
+        }
+
+         @media screen and (max-width: 550px){
+            width: 100%;
+        }
+    }
+
+    &-subtitle{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 23);
+        width: 484px;
+        color: #282938;
+        text-align: justify;
+        font-style: normal;
+        font-weight: 400;
+        opacity: 0.7;
+         @media screen and (max-width: 980px){
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 550px){
+            width: 100%;
+        }
+    }
+
+    &-img{
+        @include adaptive-value('width', 547, 100)
+    }
+}
