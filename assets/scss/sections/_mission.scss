@@ -22,6 +22,8 @@
     &-femael{
         @include flex(center, space-between);
         gap: 20px;
+        margin-bottom: 100px;
+
 
         @media screen and (max-width: 840px){
             flex-direction: column-reverse;

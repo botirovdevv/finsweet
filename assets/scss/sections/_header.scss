@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 .header{
-    @include flex(center, space-between);
+    @include flex(flex-start, space-between);
     margin-top: 130px;
 
+    &-content{
+        margin-bottom: 130px;
+    }
 
     &-img{
         @include adaptive-value('width', 638, 100);
