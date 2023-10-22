@@ -1,0 +1,135 @@
+.pricing{
+    margin-top: 130px;
+    &-title{
+        @include adaptive-value('font-size', 48, 20);
+        @include adaptive-value('line-height', 64, 24);
+        color: #282938;
+        font-style: normal;
+        font-weight: 600;
+        text-align: center;
+        @media screen and (max-width: 620px){
+            width: 100%;
+        }
+    }
+
+    &-subtitle{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 23);
+        width: 562px;
+        color: #282938;
+        text-align: center;
+        font-style: normal;
+        font-weight: 500;
+        opacity: 0.7;
+        margin: 0 auto;
+        @media screen and (max-width: 620px){
+            width: 100%;
+        }
+    }
+
+    &-cards{
+        @include flex(center, center);
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+
+    &-card{
+        border-radius: 12px;
+        background: #F4F6FC;
+        padding: 60px 48px;
+        transition: all 0.3s ease-in-out;
+        
+        &:hover{
+            transform: translateY(-20px);
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 390px){
+            width: 100%;
+        }
+    }
+
+    &-items{
+        @include flex(center, unset);
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    &-text{
+        @include adaptive-value('font-size', 38, 20);
+        @include adaptive-value('line-height', 56, 24);
+        color: #282938;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    &-link{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 23);
+        color: #2405F2;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    &-card__title{
+        @include adaptive-value('font-size', 24, 19);
+        @include adaptive-value('line-height', 36, 23);
+        color: #282938;
+        font-style: normal;
+        font-weight: 500;
+        width: 180px;
+    }
+
+    &-card__subtitle{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 24);
+        color: #282938;
+        font-style: normal;
+        font-weight: 500;
+        width: 280px;
+        margin-top: 10px;
+
+        @media screen and (max-width: 360px){
+            width: 100%;
+        }
+    }
+
+    &-info__blok{
+        margin-top: 70px;
+        @include flex(start, unset);
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 80px;
+    }
+
+    &-info{
+        @include flex(center, unset);
+        gap: 10px
+    }
+
+    &-info__text{
+        @include adaptive-value('font-size', 16, 13);
+        @include adaptive-value('line-height', 28, 24);
+        color: #282938;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    &-button__blok{
+        @include flex(center, center)
+    }
+
+    &-button{
+        @include adaptive-value('font-size', 18, 14);
+        @include adaptive-value('line-height', 32, 24);
+        color: #282938;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 600;
+        border-radius: 41px;
+        background: #FCD980;
+        padding: 15px 51px;
+        border: none;
+    }
+}
